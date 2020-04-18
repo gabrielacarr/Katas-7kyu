@@ -10,7 +10,7 @@ function disemvowel(str) {
 
 // solution 2
   const disemvowel = (str) => str.replace(/[aeiou]/gi, "");
-  
+
 // solution 3
   // charAt - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
   // indexOf - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
@@ -24,4 +24,22 @@ function disemvowel(str) {
         newStr += str.charAt(i);       // if it doesn't exist then add it to the new string
     }
     return newStr;
+  }  
+  
+  // solution 4
+  // split - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+  // filter - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+  // includes - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+  // toLowerCase - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+  // join - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+  function disemvowel(str) {
+    let vowels = "aeiou";
+    let strArr = str.split("");   // turn string into array
+    let filterArr = strArr.filter(letter => {
+      return !vowels.includes(letter.toLowerCase());  // if the letter is not found in vowels then add it to the filterArr
+    });
+    let newStr = filterArr.join("")
+    
+    return newStr;
   }
+  
