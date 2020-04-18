@@ -90,3 +90,11 @@ function squareDigits(num){
   // Solution 4 - The Victor
 const squareDigits = num => parseInt(num.toString().split("").map(num => parseInt(num)).map(num => num * num).join(""))
 
+// Solution 5
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+function squareDigits (num) {
+    let x = num.toString().split('').map(Number); 
+    x.forEach((element, i) => x[i] = element * element);
+    return Number(x.join(''));
+  }
+  
