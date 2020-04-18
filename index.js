@@ -7,3 +7,7 @@ function disemvowel(str) {
       str = str.replace(regex, "");  // used regex and replace to remove the vowels
       return str;
     }
+
+    // solution 2
+  const disemvowel = (str) => str.replace(/[aeiou]/gi, "");
+  
