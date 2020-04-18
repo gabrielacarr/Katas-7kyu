@@ -86,4 +86,7 @@ function squareDigits(num){
      
     return parseInt(result)           // turn the string into a number
   }
-   
+
+  // Solution 4 - The Victor
+const squareDigits = num => parseInt(num.toString().split("").map(num => parseInt(num)).map(num => num * num).join(""))
+
