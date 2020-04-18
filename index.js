@@ -42,4 +42,8 @@ function disemvowel(str) {
     
     return newStr;
   }
+
+  // solution 4.1
+    const disemvowel = str => str.split('').filter(letter => !"aeiou".includes(letter.toLowerCase())).join('');
+  
   
